@@ -1,21 +1,22 @@
-const express = require('express');
-const cors = require('cors');
-const index = require('./routes/index');
+import express from "express";
+import cors from "cors";
+import index from "./routes";
+
 class App {
-    constructor() {
-        this.app = express();
-        this.middlewares();
-        this.routes();
-    }
+  constructor() {
+    this.app = express();
+    this.middlewares();
+    this.routes();
+  }
 
-    middlewares() {
-        this.app.use(cors());
-        this.app.use(express.json());
-    }
+  middlewares() {
+    this.app.use(cors());
+    this.app.use(express.json());
+  }
 
-    routes() {
-        this.app.use('/index', index);
-    }
+  routes() {
+    this.app.use("/api", index);
+  }
 }
 
-module.exports = new App().app;
+export default new App().app;
