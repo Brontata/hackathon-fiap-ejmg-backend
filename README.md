@@ -42,4 +42,3 @@ A aplicação segue uma arquitetura baseada em camadas, dividindo responsabilida
 6. **Banco de Dados**: Armazena os dados persistentes da aplicação, utilizando o PostgreSQL para garantir a integridade e a consistência das informações.
 
 Com essa arquitetura, a aplicação mantém uma separação clara de responsabilidades, promovendo a reutilização de código e tornando o sistema mais fácil de entender e evoluir.
-
