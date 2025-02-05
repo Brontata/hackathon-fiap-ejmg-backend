@@ -8,5 +8,6 @@ router.get("/openai/questions", OpenAIController.getQuestions);
 router.get("/user/score", UserController.getScore);
 router.get("/user/:cpf", UserController.show);
 router.post("/user/score", UserController.saveScore);
+router.post("/user", UserController.createUser);
 
 export default router;
