@@ -25,12 +25,11 @@ class UserService {
     });
   }
 
-  async createUser(user_id, name, cpf) {
+  async createUser(name, cpf) {
     return await prisma.user.create({
       data: {
-        id: user_id,
         name: name,
-        cpf: cpf,
+        cpf: cpf
       },
     });
   }

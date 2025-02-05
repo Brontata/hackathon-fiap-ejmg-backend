@@ -32,7 +32,7 @@ class UserController {
       const user = await userService.createUser(name, cpf);
       return response.json(user);
     } catch (error) {
-      return response.status(500).json({ message: "Internal server error" });
+      return response.status(500).json({ message: "Internal server error", error: error.message });
     }
   }
 }
