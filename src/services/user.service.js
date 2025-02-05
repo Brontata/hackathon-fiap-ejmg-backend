@@ -24,6 +24,16 @@ class UserService {
       _sum: { score: true },
     });
   }
+
+  async createUser(user_id, name, cpf) {
+    return await prisma.user.create({
+      data: {
+        id: user_id,
+        name: name,
+        cpf: cpf,
+      },
+    });
+  }
 }
 
 export default new UserService();

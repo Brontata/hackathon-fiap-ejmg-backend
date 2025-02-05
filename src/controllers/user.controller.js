@@ -25,6 +25,16 @@ class UserController {
     const score = await userService.getScore(cpf);
     return response.json(score[0]._sum);
   }
+
+  async createUser(request, response) {
+    try {
+      const { name, cpf } = request.body;
+      const user = await userService.createUser(name, cpf);
+      return response.json(user);
+    } catch (error) {
+      return response.status(500).json({ message: "Internal server error" });
+    }
+  }
 }
 
 export default new UserController();
